@@ -1,0 +1,167 @@
+﻿@model ExpenseSummaryViewModel
+
+@{
+    ViewData["Title"] = "Expense Summary";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css?v=1.8" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="sumcontainer">
+        <!-- Pie Chart -->
+        <div id="pie-chart-container">
+            <canvas id="pieChart"></canvas>
+        </div>
+        <div id="expense-summary" class="flex-container">
+            @foreach (var categoryGroup in Model.Expenses.GroupBy(e => e.Category.CategoryName))
+            {
+                <div class="category-section" style="position: relative;">                  
+                    <div class="category-header">
+                        <span style="font-weight: 600; font-size: 1rem;">@categoryGroup.Key</span>
+                        <span class="category-total" style="font-size: 1rem">
+                            (₱@categoryGroup.Sum(e => e.Amount).ToString("N2"))
+                        </span>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Overall Total -->
+        <div id="overall-total">
+            <span style="font-weight: 900; font-size: 1rem;">Total Amount:</span>
+            <span style="font-weight: 500; font-size: 1rem;">
+                ₱@Model.Expenses.Sum(e => e.Amount).ToString("N2")
+            </span>
+        </div>
+    </div>
+
+    <div id="modal-overlay" class="modal-overlay" style="display: none;">
+        <div class="modal">
+            <div class="modal-header">
+                <span id="modal-title"></span>
+                <button class="close-modal" onclick="closeModal()">×</button>
+            </div>
+            <div id="modal-content" class="modal-content"></div>
+        </div>
+    </div>
+
+    <script>
+        
+
+        var expenseCategories = @Html.Raw(Json.Serialize(Model.Expenses.GroupBy(e => e.Category.CategoryName)
+            .Select(g => new { category = g.Key, total = g.Sum(e => e.Amount) })
+            .ToList()));
+
+        var labels = expenseCategories.map(function (category) {
+            return category.category;
+        });
+
+        var data = expenseCategories.map(function (category) {
+            return category.total;
+        });
+
+        // Calculate the total amount to be used for percentage calculation
+        var totalAmount = data.reduce(function (sum, currentValue) {
+            return sum + currentValue;
+        }, 0);
+
+        // Calculate the percentage for each category
+        var percentages = data.map(function (amount) {
+            return (amount / totalAmount * 100).toFixed(2); // Percentage with two decimals
+        });
+
+        // Define a color palette for the pie chart
+        var colorPalette = [
+            '#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b', '#e377c2', '#7f7f7f',
+            '#bcbd22', '#17becf', '#f7a500', '#636363'
+        ];
+
+        // Dynamically assign colors based on the number of categories
+        var dynamicColors = expenseCategories.map(function (category, index) {
+            return colorPalette[index % colorPalette.length]; // Loop through the color palette
+        });
+
+        // Initialize the Pie Chart
+        var ctx = document.getElementById('pieChart').getContext('2d');
+        var pieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Expense Categories',
+                    data: data,
+                    backgroundColor: dynamicColors, // Apply dynamic colors
+                    borderColor: dynamicColors.map(function () { return '#ffffff'; }), // White borders for contrast
+                    borderWidth: 2,
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'left',  
+                        labels: {
+                            font: {
+                                size: 14,
+                                family: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+                                weight: 'bold',
+                            },
+                            padding: 2,
+                            boxWidth: 20,
+                            boxHeight: 20,
+                            // Add maxHeight for scrollable legend if too many categories
+                            maxHeight: 400,
+                            overflow: 'auto'
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: '#333',
+                        titleFont: {
+                            size: 14,
+                        },
+                        bodyFont: {
+                            size: 12,
+                        },
+                        callbacks: {
+                            label: function (tooltipItem) {
+                                var index = tooltipItem.dataIndex;
+                                var percentage = percentages[index];
+                                return labels[index] + ': ₱' + tooltipItem.raw.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' (' + percentage + '%)';
+                            }
+                        }
+                    },
+                    datalabels: {
+                        display: true,
+                        color: '#ffffff', // White text for contrast
+                        font: {
+                            weight: 'bold',
+                            size: 12,
+                        },
+                        formatter: function (value, context) {
+                            var percentage = (value / totalAmount * 100).toFixed(2);
+                            return context.chart.data.labels[context.dataIndex] + ': ' + percentage + '%';
+                        }
+                    }
+                },
+                cutoutPercentage: 60,
+                maintainAspectRatio: false,
+                animation: {
+                    animateScale: true,
+                    animateRotate: true,
+                }
+            }
+        });
+    </script>
+
+
+</body>
+</html>

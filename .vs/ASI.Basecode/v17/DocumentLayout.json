@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|c:\\users\\loryn\\downloads\\asibasecode\\asibasecode\\asibasecode\\asi.basecode.data\\interfaces\\iexpenserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|solutionrelative:asi.basecode.data\\interfaces\\iexpenserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|c:\\users\\loryn\\downloads\\asibasecode\\asibasecode\\asibasecode\\asi.basecode.data\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|solutionrelative:asi.basecode.data\\models\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|c:\\users\\loryn\\downloads\\asibasecode\\asibasecode\\asibasecode\\asi.basecode.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|solutionrelative:asi.basecode.data\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|c:\\users\\loryn\\downloads\\asibasecode\\asibasecode\\asibasecode\\asi.basecode.data\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|solutionrelative:asi.basecode.data\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|c:\\users\\loryn\\downloads\\asibasecode\\asibasecode\\asibasecode\\asi.basecode.data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|solutionrelative:asi.basecode.data\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|c:\\users\\loryn\\downloads\\asibasecode\\asibasecode\\asibasecode\\asi.basecode.data\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{19A1CD85-842A-4C7C-B29A-5928626D75A7}|ASI.Basecode.Data\\ASI.Basecode.Data.csproj|solutionrelative:asi.basecode.data\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ICategoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Interfaces\\ICategoryRepository.cs",
+              "RelativeDocumentMoniker": "ASI.Basecode.Data\\Interfaces\\ICategoryRepository.cs",
+              "ToolTip": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Interfaces\\ICategoryRepository.cs",
+              "RelativeToolTip": "ASI.Basecode.Data\\Interfaces\\ICategoryRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAcAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:56:39.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "ASI.Basecode.Data\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "ASI.Basecode.Data\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:55:10.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "ASI.Basecode.Data\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Models\\Category.cs",
+              "RelativeToolTip": "ASI.Basecode.Data\\Models\\Category.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAIwAwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:54:52.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ASI.Basecode.Data\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Models\\User.cs",
+              "RelativeToolTip": "ASI.Basecode.Data\\Models\\User.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA0wBEAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:50:22.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Models\\Expense.cs",
+              "RelativeDocumentMoniker": "ASI.Basecode.Data\\Models\\Expense.cs",
+              "ToolTip": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Models\\Expense.cs",
+              "RelativeToolTip": "ASI.Basecode.Data\\Models\\Expense.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAIwBsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:51:22.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IExpenseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Interfaces\\IExpenseRepository.cs",
+              "RelativeDocumentMoniker": "ASI.Basecode.Data\\Interfaces\\IExpenseRepository.cs",
+              "ToolTip": "C:\\Users\\Loryn\\Downloads\\ASIBasecode\\ASIBasecode\\ASIBasecode\\ASI.Basecode.Data\\Interfaces\\IExpenseRepository.cs",
+              "RelativeToolTip": "ASI.Basecode.Data\\Interfaces\\IExpenseRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T03:49:40.631Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
